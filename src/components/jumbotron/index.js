@@ -2,6 +2,7 @@ import React from "react";
 // Import Styled html 'Markup'
 import {
   Inner,
+  Item,
   Container,
   Pane,
   SubTitle,
@@ -10,7 +11,11 @@ import {
 } from "./styles/jumbotron";
 
 const Jumbotron = ({ children, direction = "row", ...restProps }) => {
-  return <Inner direction={direction}>{children}</Inner>;
+  return (
+    <Item {...restProps}>
+      <Inner direction={direction}>{children}</Inner>
+    </Item>
+  );
 };
 
 // When Called these create styled HTML Markup wrapping the Children:
@@ -31,6 +36,5 @@ Jumbotron.Image = function JumbotronContainer({ children, ...restProps }) {
   return <Image {...restProps} />;
 };
 
-export default Jumbotron;
-
 // Jumbotron: lightweight, flexible component that can optionally extend the entire viewport to showcase key content on your site.
+export default Jumbotron;

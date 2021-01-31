@@ -1,0 +1,4 @@
+// Single Point of truth for Grabbing Components
+// Optimizes for WebPack..?
+// This statements = " Export these Imports"
+export { default as Jumbotron } from "./jumbotron";
