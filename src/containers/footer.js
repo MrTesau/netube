@@ -1,28 +1,39 @@
-// Jumbo Render Container
-// Data
-import jumboData from "../fixtures/jumbo.json";
-// jumbo Component
-// The Method of setting an index reference file allows you to access whatever component you want in a single statement
 import { Footer } from "../components";
 
-const Jumbo = () => {
+export function FooterContainer() {
   return (
-    <Jumbotron.Container>
-      {jumboData.map((jumbo) => {
-        return (
-          <Jumbotron direction={jumbo.direction} key={jumbo.id}>
-            <Jumbotron.Pane>
-              <Jumbotron.Title>{jumbo.title}</Jumbotron.Title>
-              <Jumbotron.SubTitle>{jumbo.subTitle}</Jumbotron.SubTitle>
-            </Jumbotron.Pane>
-            <Jumbotron.Pane>
-              <Jumbotron.Image src={jumbo.image} alt={jumbo.alt} />
-            </Jumbotron.Pane>
-          </Jumbotron>
-        );
-      })}
-    </Jumbotron.Container>
+    <Footer>
+      <Footer.Title>Questions? Contact us.</Footer.Title>
+      <Footer.Break />
+      <Footer.Row>
+        <Footer.Column>
+          <Footer.Link href="#">FAQ</Footer.Link>
+          <Footer.Link href="#">Investor Relations</Footer.Link>
+          <Footer.Link href="#">Ways to Watch</Footer.Link>
+          <Footer.Link href="#">Corporate Infomation</Footer.Link>
+          <Footer.Link href="#">Netflix Originals</Footer.Link>
+        </Footer.Column>
+        <Footer.Column>
+          <Footer.Link href="#">Help Centre</Footer.Link>
+          <Footer.Link href="#">Jobs</Footer.Link>
+          <Footer.Link href="#">Terms of Use</Footer.Link>
+          <Footer.Link href="#">Contact Us</Footer.Link>
+        </Footer.Column>
+        <Footer.Column>
+          <Footer.Link href="#">Account</Footer.Link>
+          <Footer.Link href="#">Redeem gift cards</Footer.Link>
+          <Footer.Link href="#">Privacy</Footer.Link>
+          <Footer.Link href="#">Speed Test</Footer.Link>
+        </Footer.Column>
+        <Footer.Column>
+          <Footer.Link href="#">Media Centre</Footer.Link>
+          <Footer.Link href="#">Buy gift cards</Footer.Link>
+          <Footer.Link href="#">Cookie Preferences</Footer.Link>
+          <Footer.Link href="#">Legal Notices</Footer.Link>
+        </Footer.Column>
+      </Footer.Row>
+      <Footer.Break />
+      <Footer.Text>Netflix New Zealand & Australia</Footer.Text>
+    </Footer>
   );
-};
-
-export default Jumbo;
+}

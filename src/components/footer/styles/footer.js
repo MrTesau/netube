@@ -7,7 +7,6 @@ export const Container = styled.div`
   max-width: 1000px;
   flex-direction: column;
 
-  border: 1px solid grey;
   @media (max-width: 1000px) {
     padding: 70px 30px;
   }
@@ -20,7 +19,6 @@ export const Column = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  border: 1px solid red;
 `;
 export const Row = styled.div`
   display: grid;
@@ -49,7 +47,7 @@ export const Text = styled.p`
   color: #757575;
   margin-bottom: 40px;
 `;
-
+// Make a Gap
 export const Break = styled.div`
   flex-basis: 100%;
   height: 0;
