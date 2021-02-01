@@ -4,13 +4,7 @@ import Accordian from "../containers/accordian";
 import JumboContainer from "../containers/jumbo";
 
 const Home = () => {
-  return (
-    <>
-      <JumboContainer />
-      <Accordian />
-      <FooterContainer />
-    </>
-  );
+  return <>SIGN UP</>;
 };
 
 export default Home;

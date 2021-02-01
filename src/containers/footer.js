@@ -1,6 +1,6 @@
 import { Footer } from "../components";
 
-export function FooterContainer() {
+function FooterContainer() {
   return (
     <Footer>
       <Footer.Title>Questions? Contact us.</Footer.Title>
@@ -37,3 +37,5 @@ export function FooterContainer() {
     </Footer>
   );
 }
+
+export default FooterContainer;
