@@ -1,14 +1,13 @@
-// Breaking App into "Compound Components"
-import JumboContainer from "./containers/jumbo";
-import { FooterContainer } from "./containers/footer";
-import Accordian from "./containers/accordian";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import * as ROUTES from "./routes";
+// Pages > Containers > Components > styled MarkUp
+import { Home } from "./pages";
+
 function App() {
   return (
-    <>
-      <JumboContainer />
-      <Accordian />
-      <FooterContainer />
-    </>
+    <Router exact path={ROUTES.HOME}>
+      <Home />
+    </Router>
   );
 }
 
