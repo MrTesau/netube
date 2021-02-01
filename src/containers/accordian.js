@@ -1,5 +1,7 @@
 import faqsData from "../fixtures/faqs.json";
-import { Accordian } from "../components";
+import { Accordian, OptForm } from "../components";
+
+// Accordian = Accordion.. Woops!
 
 const AccordianWrapper = () => {
   return (
@@ -15,6 +17,15 @@ const AccordianWrapper = () => {
           );
         })}
       </Accordian.Frame>
+      <OptForm>
+        <OptForm.Input
+          placeholder={
+            "Dont worry: Just a Placeholder, This isnt the real Netflix"
+          }
+        />
+
+        <OptForm.Button>Try It out</OptForm.Button>
+      </OptForm>
     </Accordian>
   );
 };

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Enjoy on your TV.",
+    "title": "Enjoy my YouTube Taste",
     "subTitle": "Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.",
     "image": "/images/misc/home-tv.gif",
     "alt": "Tiger King on Netflix",
@@ -9,8 +9,8 @@
   },
   {
     "id": 2,
-    "title": "Download your programmes to watch on the go.",
-    "subTitle": "Save your data and watch all your favourites offline.",
+    "title": "Enjoy the YouTube-in-Netflix Experience ",
+    "subTitle": "Enjoy a selection of my favorite Youtube videos.",
     "image": "/images/misc/home-mobile.jpg",
     "alt": "Watch on mobile",
     "direction": "row-reverse"
