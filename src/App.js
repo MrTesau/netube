@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import * as ROUTES from "./routes";
+// Front End Layout:
 // Pages > Containers > Components > styled MarkUp
 import { Home, Browse, SignIn, SignUp } from "./pages";
 
@@ -21,5 +22,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

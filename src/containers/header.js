@@ -1,6 +1,8 @@
 import { Header } from "../components";
 import * as ROUTES from "../routes";
 import logo from "../logo.svg";
+// Containers:
+// Import And Render Components in desired UI Layout
 const HeaderContainer = ({ children }) => {
   return (
     <Header>
