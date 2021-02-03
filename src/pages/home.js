@@ -22,9 +22,7 @@ const Home = () => {
             </OptForm.Text>
             <OptForm.Break />
             <OptForm.Input
-              placeholder={
-                "Dont worry: This isnt the real Netflix, Go right on in."
-              }
+              placeholder={"This isnt the real Netflix, Go right on in."}
             />
             <OptForm.Button>Browse Youtube</OptForm.Button>
           </OptForm>
