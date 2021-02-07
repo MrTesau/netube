@@ -11,11 +11,7 @@ Header.Frame = function HeaderFrame({ children, ...restProps }) {
   return <Container>{children}</Container>;
 };
 Header.ButtonLink = function HeaderButtonLink({ to, children, ...restProps }) {
-  return (
-    <ReachRouterLink to={to}>
-      <ButtonLink>{children}</ButtonLink>
-    </ReachRouterLink>
-  );
+  return <ButtonLink>{children}</ButtonLink>;
 };
 Header.Logo = function HeaderLogo({ to, ...restProps }) {
   return (
