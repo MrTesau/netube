@@ -10,8 +10,8 @@ const Header = ({ bg = true, children, restProps }) => {
 Header.Frame = function HeaderFrame({ children, ...restProps }) {
   return <Container>{children}</Container>;
 };
-Header.ButtonLink = function HeaderButtonLink({ to, children, ...restProps }) {
-  return <ButtonLink>{children}</ButtonLink>;
+Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }) {
+  return <ButtonLink {...restProps}>{children}</ButtonLink>;
 };
 Header.Logo = function HeaderLogo({ to, ...restProps }) {
   return (
