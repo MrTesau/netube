@@ -1,7 +1,8 @@
 import React from "react";
-import FooterContainer from "../containers/footer";
-import Accordian from "../containers/accordian";
-import JumboContainer from "../containers/jumbo";
+
+// Import Json with arr of films/videos
+// This will simulate database retrieval
+
 const Home = () => {
   return <>BROWSE</>;
 };

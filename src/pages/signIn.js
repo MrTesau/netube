@@ -1,28 +1,22 @@
 import React from "react";
 import HeaderContainer from "../containers/header";
+import FooterContainer from "../containers/footer";
 import { Form } from "../components";
 
 const SignUpPage = () => {
-  const [emailAddress, setEmailAddress] = React.useState("");
-  const [password, setPassword] = React.useState("");
-
   const handleSignin = () => {};
   return (
     <>
       <HeaderContainer>
         <Form>
-          <Form.Title>Placeholder Sign In </Form.Title>
+          <Form.Title>No Sign In Needed </Form.Title>
 
           <Form.Base onSubmit={handleSignin} method="POST">
-            <Form.Input
-              placeholder=""
-              onChange={({ target }) => setEmailAddress(target.value)}
-            />
+            <Form.Input placeholder="" />
             <Form.Input
               type="password"
               autoComplete="off"
               placeholder="Password"
-              onChange={({ target }) => setPassword(target.value)}
             />
             <Form.Submit type="submit" data-testid="sign-in">
               Enter
@@ -38,6 +32,7 @@ const SignUpPage = () => {
           </Form.TextSmall>
         </Form>
       </HeaderContainer>
+      <FooterContainer />
     </>
   );
 };
