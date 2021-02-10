@@ -11,20 +11,18 @@ const SignUpPage = () => {
         <Form>
           <Form.Title>No Sign In Needed </Form.Title>
 
-          <Form.Base onSubmit={handleSignin} method="POST">
+          <Form.Base>
             <Form.Input placeholder="" />
             <Form.Input
               type="password"
               autoComplete="off"
               placeholder="Password"
             />
-            <Form.Submit type="submit" data-testid="sign-in">
-              Enter
-            </Form.Submit>
+            <Form.Submit to="/browse">Enter</Form.Submit>
           </Form.Base>
 
           <Form.Text>
-            New to Netflix? <Form.Link to="/signup">Sign up now.</Form.Link>
+            New to NetTube? <Form.Link to="/browse">Go Right In</Form.Link>
           </Form.Text>
           <Form.TextSmall>
             This page is protected by Google reCAPTCHA to ensure you're not a
