@@ -2,7 +2,7 @@ export default function selectionFilter(library = []) {
   return {
     videos: [
       {
-        title: "trailers",
+        title: "Trailers",
         data: library.filter((item) => item.genre === "trailers"),
       },
       {
@@ -10,15 +10,15 @@ export default function selectionFilter(library = []) {
         data: library.filter((item) => item.genre === "comedies"),
       },
       {
-        title: "Children",
+        title: "Awesome",
         data: library.filter((item) => item.genre === "children"),
       },
       {
-        title: "Crime",
+        title: "Motivation",
         data: library.filter((item) => item.genre === "crime"),
       },
       {
-        title: "Feel Good",
+        title: "Memes",
         data: library.filter((item) => item.genre === "feel-good"),
       },
     ],

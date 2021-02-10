@@ -40,7 +40,7 @@ export const Background = styled.div`
 export const Frame = styled.div``;
 
 export const Logo = styled.img`
-  height: 39px;
+  height: 49px;
   width: 129px;
   margin-right: 30px;
 
