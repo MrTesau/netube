@@ -1,6 +1,6 @@
 import { Header } from "../components";
 import * as ROUTES from "../routes";
-import logo from "../logo.svg";
+import logo from "../nettube.png";
 // Containers:
 // Import And Render Components in desired UI Layout
 const HeaderContainer = ({ children }) => {

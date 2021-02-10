@@ -25,7 +25,7 @@ const Home = () => {
             <OptForm.Input
               placeholder={"This isnt the real Netflix, Go right on in."}
             />
-            <OptForm.Button to={ROUTES.BROWSE}>Browse Youtube</OptForm.Button>
+            <OptForm.Button to={ROUTES.BROWSE}>Browse NetTube</OptForm.Button>
           </OptForm>
         </Feature>
       </HeaderContainer>
