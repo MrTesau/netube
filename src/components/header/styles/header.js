@@ -4,6 +4,7 @@ import { Link as ReachRouterLink } from "react-router-dom";
 export const Container = styled.div`
   display: flex;
   margin: 0 56px;
+  padding-top: 30px;
   height: 100px;
   justify-content: space-between;
   align-items: center;
@@ -39,13 +40,13 @@ export const Background = styled.div`
 export const Frame = styled.div``;
 
 export const Logo = styled.img`
-  height: 69px;
-  width: 169px;
+  height: 39px;
+  width: 129px;
   margin-right: 30px;
 
   @media (min-width: 1449px) {
-    height: 80px;
-    width: 179px;
+    height: 50px;
+    width: 139px;
   }
 `;
 
@@ -68,7 +69,7 @@ export const ButtonLink = styled(ReachRouterLink)`
 `;
 
 export const Feature = styled(Container)`
-  padding: 200px 0 450px 0;
+  padding: 220px 0 430px 0;
   flex-direction: column;
   align-items: normal;
   width: 40%;
