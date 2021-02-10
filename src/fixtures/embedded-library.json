@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Dune Trailer",
+    "description": "The upcoming classic remake. Dune will be released late 2021 covid gods permitting",
+    "genre": "trailers",
+    "url": "",
+    "previewImg": ""
+  },
+  {
+    "id": 2,
+    "title": "500 Pound Gorilla",
+    "description": "A Classic Joe Rogan clip. Here we witness his transformation into a 800 pound man killer.",
+    "genre": "comedy",
+    "url": "https://www.youtube.com/watch?v=XwvmpVbggCU&ab_channel=PINGTR1P",
+    "previewImg": ""
+  }
+]

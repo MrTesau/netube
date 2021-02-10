@@ -4,6 +4,7 @@ import Accordian from "../containers/accordian";
 import JumboContainer from "../containers/jumbo";
 import HeaderContainer from "../containers/header";
 import { OptForm, Feature } from "../components/";
+import * as ROUTES from "../routes";
 
 const Home = () => {
   return (
@@ -24,7 +25,7 @@ const Home = () => {
             <OptForm.Input
               placeholder={"This isnt the real Netflix, Go right on in."}
             />
-            <OptForm.Button>Browse Youtube</OptForm.Button>
+            <OptForm.Button to={ROUTES.BROWSE}>Browse Youtube</OptForm.Button>
           </OptForm>
         </Feature>
       </HeaderContainer>

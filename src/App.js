@@ -10,7 +10,7 @@ function App() {
       <Route exact path={ROUTES.HOME}>
         <Home />
       </Route>
-      <Route exactpath={ROUTES.SIGN_IN}>
+      <Route exact path={ROUTES.SIGN_IN}>
         <SignIn />
       </Route>
       <Route exact path={ROUTES.SIGN_UP}>
