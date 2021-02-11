@@ -3,16 +3,18 @@ import { Header, Card, Loading } from "../components";
 import * as ROUTES from "../routes";
 import logo from "../nettube.png";
 
+import youtube from "../API/functions";
+import { SubTitle } from "./../components/jumbotron/styles/jumbotron";
+
 // Set search term on search
 // Useeffect Hook to call youtube API on search term chnage
 // conditionall render cards or search results in return
 
 const Browse = ({ slides }) => {
   const [category, setCategory] = useState("videos");
-  const [profile, setProfile] = useState({});
-  const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState("");
   const [slideRows, setSlideRows] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     setSlideRows(slides.videos);
@@ -21,6 +23,17 @@ const Browse = ({ slides }) => {
   useEffect(() => {
     // Request Youtube Api
   }, [searchTerm]);
+
+  const handleSubmit = async (search) => {
+    const response = await youtube.get("/search", {
+      params: {
+        q: search,
+      },
+    });
+    console.log(response.data.items);
+    setSearchResults(response.data.items);
+  };
+
   return (
     <>
       <Header
@@ -51,7 +64,12 @@ const Browse = ({ slides }) => {
             />
 
             <Header.Group>
-              <Header.Text onClick={() => setSearchTerm("poo")}>
+              <Header.Text
+                onClick={() => {
+                  setSearchTerm("avengers");
+                  handleSubmit("avengers");
+                }}
+              >
                 Search{" "}
               </Header.Text>
             </Header.Group>
@@ -74,15 +92,17 @@ const Browse = ({ slides }) => {
           <Header.PlayButton>Play</Header.PlayButton>
         </Header.Feature>
       </Header>
-      {searchTerm !== "" ? <Loading /> : null}
+
+      {searchTerm !== "" && searchResults.length === 0 ? <Loading /> : null}
+
       <Card.Group>
         {searchTerm === "" ? (
-          slideRows.map((slideItem) => (
-            <Card key={`${slideItem.id}`}>
+          slideRows.map((slideItem, i) => (
+            <Card key={i}>
               <Card.Title>{slideItem.title}</Card.Title>
               <Card.Entities>
                 {slideItem.data.map((item) => (
-                  <Card.Item key={item.docId} item={item}>
+                  <Card.Item key={item.id} item={item}>
                     <Card.Image src={`${item.previewImg}`} />
                     <Card.Meta>
                       <Card.SubTitle>{item.title}</Card.SubTitle>
@@ -95,7 +115,20 @@ const Browse = ({ slides }) => {
             </Card>
           ))
         ) : (
-          <div>search results here</div>
+          <>
+            <Card.Title>Search Results</Card.Title>
+            <Card.Entities>
+              {searchResults.map((result, i) => (
+                <Card.SearchItem key={i} item={result}>
+                  <Card.Image /*src={`${item.previewImg}`}*/ />
+                  <Card.Meta>
+                    <Card.SubTitle>{result.snippet.title}</Card.SubTitle>
+                    <Card.Text>{result.snippet.description}</Card.Text>
+                  </Card.Meta>
+                </Card.SearchItem>
+              ))}
+            </Card.Entities>
+          </>
         )}
       </Card.Group>
     </>

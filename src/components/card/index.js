@@ -75,6 +75,9 @@ Card.Item = function CardItem({ item, children, ...restProps }) {
     </Item>
   );
 };
+Card.SearchItem = function CardSearchItem({ item, children, ...restProps }) {
+  return <Item {...restProps}>{children}</Item>;
+};
 
 Card.Image = function CardImage({ ...restProps }) {
   return <Image {...restProps} />;
