@@ -11,15 +11,15 @@ export default function selectionFilter(library = []) {
       },
       {
         title: "Awesome",
-        data: library.filter((item) => item.genre === "children"),
+        data: library.filter((item) => item.genre === "awesome"),
       },
       {
         title: "Motivation",
-        data: library.filter((item) => item.genre === "crime"),
+        data: library.filter((item) => item.genre === "motivation"),
       },
       {
         title: "Memes",
-        data: library.filter((item) => item.genre === "feel-good"),
+        data: library.filter((item) => item.genre === "memes"),
       },
     ],
   };

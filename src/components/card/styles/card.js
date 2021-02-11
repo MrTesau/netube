@@ -76,8 +76,10 @@ export const Image = styled.img`
   border: 0;
   width: 100%;
   max-width: 305px;
+
   cursor: pointer;
   height: auto;
+  max-height: 150px;
   padding: 0;
   margin: 0;
 `;

@@ -88,6 +88,17 @@
     "slug": "500PoundGorilla"
   },
   {
+    "id": 10,
+    "title": "Dark Place GSP",
+    "description": "An MMA legend, GSP was known to visit dark places in the Octagon. Is it aliens? Is such a thing even possible?",
+    "genre": "comedies",
+    "url": "FE8UgmQoUqI",
+    "previewImg": "/images/videos/gsp.jpg",
+    "largeImg": "/images/videos/gsp1.jpg",
+    "maturity": "18",
+    "slug": "500PoundGorilla"
+  },
+  {
     "id": 9,
     "title": "Cocainum!",
     "description": "Arnold finds something in a fake leg. What could it be? We will never know.",
@@ -99,14 +110,114 @@
     "slug": "500PoundGorilla"
   },
   {
-    "id": 10,
-    "title": "Dark Place GSP",
-    "description": "An mma legend, GSP was known to visit dark places in the Octagon. Is it aliens? Is such a thing even possible?",
-    "genre": "comedies",
-    "url": "FE8UgmQoUqI",
-    "previewImg": "/images/videos/gsp.jpg",
-    "largeImg": "/images/videos/gsp1.jpg",
+    "id": 11,
+    "title": "Oldboy: Hallway fight scene",
+    "description": "One of the best examples of old school cinematography. The 2015 remake has nothing on this original masterpiece.",
+    "genre": "awesome",
+    "url": "VwIIDzrVVdc",
+    "previewImg": "/images/videos/oldboy.jpg",
+    "largeImg": "/images/videos/oldboyLarge.jpg",
     "maturity": "18",
     "slug": "500PoundGorilla"
+  },
+  {
+    "id": 12,
+    "title": "Attack on Titan: Eren's Ultimate Transformation.",
+    "description": "While not a huge fan of anime, This scene is beyond awesome.",
+    "genre": "awesome",
+    "url": "AqpNKi03uSs",
+    "previewImg": "/images/videos/eren.jpg",
+    "largeImg": "/images/videos/erenLarge.jpg",
+    "maturity": "18",
+    "slug": "500PoundGorilla"
+  },
+  {
+    "id": 12,
+    "title": "Vegeta's Attonement",
+    "description": "The Saiyan prince makes his first selfless sacrifice in the face of unbeatable odds.",
+    "genre": "awesome",
+    "url": "FZnID4H6jLQ",
+    "previewImg": "/images/videos/vegeta.jpg",
+    "largeImg": "/images/videos/vegeta.jpg",
+    "maturity": "18",
+    "slug": "500PoundGorilla"
+  },
+  {
+    "id": 13,
+    "title": "S**t Foot",
+    "description": "A highschool homemade film I was a part of in 2007. One of my few mistakes.",
+    "genre": "awesome",
+    "url": "cbHscAzklHE",
+    "previewImg": "/images/videos/shitfoot.jpg",
+    "largeImg": "/images/videos/shitfootLarge.jpg",
+    "maturity": "18",
+    "slug": "500PoundGorilla"
+  },
+  {
+    "id": 14,
+    "title": "Giant Ants",
+    "description": "Sounds like a bird but its a f***** ant.",
+    "genre": "awesome",
+    "url": "eJ-s8BvDeX4",
+    "previewImg": "/images/videos/ant.jpg",
+    "largeImg": "/images/videos/antlarge.jpg",
+    "maturity": "18",
+    "slug": "500PoundGorilla"
+  },
+  {
+    "id": 15,
+    "title": "Bodybuilding Motivation: Mudvayne",
+    "description": "One of the first preworkout videos I used to great effect.",
+    "genre": "motivation",
+    "url": "y5CRl6W6aJ8",
+    "previewImg": "/images/videos/gym.jpg",
+    "largeImg": "",
+    "maturity": "18",
+    "slug": "500PoundGorilla"
+  },
+  {
+    "id": 16,
+    "title": "Jocko W: 'GOOD'",
+    "description": "Hardcore mindset for life. How to deal with failure and bad situations.  Excerpt from the Jocko Podcast (iTunes).",
+    "genre": "motivation",
+    "url": "IdTMDpizis8",
+    "previewImg": "/images/videos/joko.jpg",
+    "largeImg": "/images/videos/jokoLarge.jpg",
+    "maturity": "18",
+    "slug": "500PoundGorilla"
+  },
+  {
+    "id": 16,
+    "title": "David Goggins",
+    "description": "'They don't know me son!' an iconic quote of David Goggins. David Goggins and Cam Hanes are killing reps together in the gym",
+    "genre": "motivation",
+    "url": "IdTMDpizis8",
+    "previewImg": "/images/videos/goggins.jpg",
+    "largeImg": "",
+    "maturity": "18",
+    "slug": "500PoundGorilla"
+  },
+  {
+    "id": 17,
+    "title": "Economical Overeem",
+    "description": "With Drug testing came the end of Ubereem. In order to survive Overeem had to adapt and form a different version of himself. This version is called Economical Overeem.",
+    "genre": "motivation",
+    "url": "nKd9uUqgIGE",
+    "previewImg": "/images/videos/ubereem.jpg",
+    "largeImg": "",
+    "maturity": "18",
+    "slug": "500PoundGorilla"
+  },
+
+  {
+    "id": 16,
+    "title": "Dune Trailer",
+    "description": "The upcoming classic remake. Dune will be released late 2021 COVID-19 gods permitting.",
+    "genre": "motivation",
+    "url": "n9xhJrPXop4",
+    "previewImg": "/images/videos/dunesmall.jpg",
+    "largeImg": "/images/videos/dunelarge.jpg",
+    "maturity": "18",
+    "slug": "DuneTrailer"
   }
 ]
