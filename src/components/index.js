@@ -10,3 +10,4 @@ export { default as Feature } from "./feature";
 export { default as Form } from "./form";
 export { default as Card } from "./card";
 export { default as Player } from "./player";
+export { default as Loading } from "./loading";

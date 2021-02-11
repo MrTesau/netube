@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Header, Card } from "../components";
+import { Header, Card, Loading } from "../components";
 import * as ROUTES from "../routes";
 import logo from "../nettube.png";
 
@@ -74,6 +74,7 @@ const Browse = ({ slides }) => {
           <Header.PlayButton>Play</Header.PlayButton>
         </Header.Feature>
       </Header>
+      {searchTerm !== "" ? <Loading /> : null}
       <Card.Group>
         {searchTerm === "" ? (
           slideRows.map((slideItem) => (
