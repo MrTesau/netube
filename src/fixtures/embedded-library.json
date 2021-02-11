@@ -39,7 +39,7 @@
     "genre": "trailers",
     "url": "zSWdZVtXT7E",
     "previewImg": "/images/videos/interstellarSmall.jpg",
-    "largeImg": "/images/videos/interstellarSmall.jpg",
+    "largeImg": "/images/videos/interstellarLarge.jpg",
     "maturity": "18",
     "slug": "DuneTrailer"
   },
@@ -50,7 +50,7 @@
     "genre": "trailers",
     "url": "34cEo0VhfGE",
     "previewImg": "/images/videos/janeksmall.jpg",
-    "largeImg": "/images/videos/janeksmall.jpg",
+    "largeImg": "",
     "maturity": "18",
     "slug": "DuneTrailer"
   },
@@ -61,7 +61,7 @@
     "genre": "comedies",
     "url": "XwvmpVbggCU",
     "previewImg": "/images/videos/gorillasmall.jpg",
-    "largeImg": "/images/videos/gorillasmall.jpg",
+    "largeImg": "/images/videos/chimp.jpg",
     "maturity": "18",
     "slug": "500PoundGorilla"
   },
@@ -145,7 +145,7 @@
   {
     "id": 13,
     "title": "S**t Foot",
-    "description": "A highschool homemade film I was a part of in 2007. One of my few mistakes.",
+    "description": "A highschool homemade film I was a part of many years ago. One of my few mistakes in life.",
     "genre": "awesome",
     "url": "cbHscAzklHE",
     "previewImg": "/images/videos/shitfoot.jpg",
@@ -156,7 +156,7 @@
   {
     "id": 14,
     "title": "Giant Ants",
-    "description": "Sounds like a bird but its a f***** ant.",
+    "description": "Sounds like a bird but its a f***** ant. An awesome clip from Kong: Skull Island.",
     "genre": "awesome",
     "url": "eJ-s8BvDeX4",
     "previewImg": "/images/videos/ant.jpg",

@@ -146,7 +146,7 @@ export const Feature = styled.div`
 
   @media (max-width: 1000px) {
     height: auto;
-    background-size: auto;
+    background: none;
 
     ${Title} {
       font-size: 20px;
@@ -158,6 +158,7 @@ export const Feature = styled.div`
     }
   }
 `;
+//background-size: auto;
 
 export const FeatureTitle = styled(Title)`
   margin-left: 0;
