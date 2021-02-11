@@ -121,7 +121,7 @@
     "slug": "500PoundGorilla"
   },
   {
-    "id": 12,
+    "id": 121,
     "title": "Attack on Titan: Eren's Ultimate Transformation.",
     "description": "While not a huge fan of anime, This scene is beyond awesome.",
     "genre": "awesome",
@@ -187,7 +187,7 @@
     "slug": "500PoundGorilla"
   },
   {
-    "id": 16,
+    "id": 17,
     "title": "David Goggins",
     "description": "'They don't know me son!' an iconic quote of David Goggins. David Goggins and Cam Hanes are killing reps together in the gym",
     "genre": "motivation",
@@ -198,7 +198,7 @@
     "slug": "500PoundGorilla"
   },
   {
-    "id": 17,
+    "id": 18,
     "title": "Economical Overeem",
     "description": "With Drug testing came the end of Ubereem. In order to survive Overeem had to adapt and form a different version of himself. This version is called Economical Overeem.",
     "genre": "motivation",
@@ -210,7 +210,7 @@
   },
 
   {
-    "id": 16,
+    "id": 19,
     "title": "Dune Trailer",
     "description": "The upcoming classic remake. Dune will be released late 2021 COVID-19 gods permitting.",
     "genre": "motivation",
@@ -221,7 +221,7 @@
     "slug": "DuneTrailer"
   },
   {
-    "id": 17,
+    "id": 20,
     "title": "Francis Ngganou Remix",
     "description": "The one punch man of MMA gives us some valuable advice on what to do.",
     "genre": "memes",
@@ -230,5 +230,49 @@
     "largeImg": "",
     "maturity": "18",
     "slug": "DuneTrailer"
+  },
+  {
+    "id": 21,
+    "title": "The Bogdanoff Saga",
+    "description": "The world of cryptocurrency trading is widely believed to be at the mercy of the omnipotent 'Boggs'.",
+    "genre": "memes",
+    "url": "KV5QlSgq7lg",
+    "previewImg": "/images/videos/boggs.jpg",
+    "largeImg": "",
+    "maturity": "18",
+    "slug": "DuneTrailer"
+  },
+  {
+    "id": 22,
+    "title": "The Triggering of Shia",
+    "description": "Internet Historian chronicles the saga of an actor facing insurmountable odds to defeat internet trolls.",
+    "genre": "memes",
+    "url": "_p4h3jwJob0",
+    "previewImg": "/images/videos/history.jpg",
+    "largeImg": "",
+    "maturity": "18",
+    "slug": "DuneTrailer"
+  },
+  {
+    "id": 23,
+    "title": "800 Pound Gorilla",
+    "description": "A Classic Joe Rogan clip. Here we witness his transformation into an 800 pound man killer.",
+    "genre": "memes",
+    "url": "XwvmpVbggCU",
+    "previewImg": "/images/videos/gorillasmall.jpg",
+    "largeImg": "/images/videos/chimp.jpg",
+    "maturity": "18",
+    "slug": "500PoundGorilla"
+  },
+  {
+    "id": 24,
+    "title": "Cocainum!",
+    "description": "Arnold finds something in a fake leg. What could it be? We will never know.",
+    "genre": "memes",
+    "url": "OF8TSHN-JDA",
+    "previewImg": "/images/videos/arnold.jpg",
+    "largeImg": "/images/videos/cocaine.jpeg",
+    "maturity": "18",
+    "slug": "500PoundGorilla"
   }
 ]
