@@ -3,6 +3,10 @@ import { Header, Card } from "../components";
 import * as ROUTES from "../routes";
 import logo from "../nettube.png";
 
+// Set search term on search
+// Useeffect Hook to call youtube API on search term chnage
+// conditionall render cards or search results in return
+
 const Browse = ({ slides }) => {
   const [category, setCategory] = useState("videos");
   const [profile, setProfile] = useState({});
@@ -13,6 +17,10 @@ const Browse = ({ slides }) => {
   useEffect(() => {
     setSlideRows(slides.videos);
   }, [slides, category]);
+
+  useEffect(() => {
+    // Request Youtube Api
+  }, [searchTerm]);
   return (
     <>
       <Header
@@ -43,7 +51,9 @@ const Browse = ({ slides }) => {
             />
 
             <Header.Group>
-              <Header.Text>Search </Header.Text>
+              <Header.Text onClick={() => setSearchTerm("poo")}>
+                Search{" "}
+              </Header.Text>
             </Header.Group>
           </Header.Group>
         </Header.Frame>
@@ -65,23 +75,27 @@ const Browse = ({ slides }) => {
         </Header.Feature>
       </Header>
       <Card.Group>
-        {slideRows.map((slideItem) => (
-          <Card key={`${slideItem.id}`}>
-            <Card.Title>{slideItem.title}</Card.Title>
-            <Card.Entities>
-              {slideItem.data.map((item) => (
-                <Card.Item key={item.docId} item={item}>
-                  <Card.Image src={`${item.previewImg}`} />
-                  <Card.Meta>
-                    <Card.SubTitle>{item.title}</Card.SubTitle>
-                    <Card.Text>{item.description}</Card.Text>
-                  </Card.Meta>
-                </Card.Item>
-              ))}
-            </Card.Entities>
-            <Card.Feature category={category} />
-          </Card>
-        ))}
+        {searchTerm === "" ? (
+          slideRows.map((slideItem) => (
+            <Card key={`${slideItem.id}`}>
+              <Card.Title>{slideItem.title}</Card.Title>
+              <Card.Entities>
+                {slideItem.data.map((item) => (
+                  <Card.Item key={item.docId} item={item}>
+                    <Card.Image src={`${item.previewImg}`} />
+                    <Card.Meta>
+                      <Card.SubTitle>{item.title}</Card.SubTitle>
+                      <Card.Text>{item.description}</Card.Text>
+                    </Card.Meta>
+                  </Card.Item>
+                ))}
+              </Card.Entities>
+              <Card.Feature category={category} />
+            </Card>
+          ))
+        ) : (
+          <div>search results here</div>
+        )}
       </Card.Group>
     </>
   );
