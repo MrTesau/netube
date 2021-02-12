@@ -159,7 +159,31 @@ export const Feature = styled.div`
   }
 `;
 //background-size: auto;
+export const SearchFeature = styled.div`
+  display: flex;
+  flex-direction: row;
+  background: url(${({ src }) => src});
+  background-size: contain;
+  position: relative;
+  height: 360px;
+  background-position-x: 75%;
+  background-repeat: no-repeat;
+  background-color: black;
 
+  @media (max-width: 1000px) {
+    height: auto;
+    background: none;
+
+    ${Title} {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+    ${FeatureText} {
+      font-size: 14px;
+    }
+  }
+`;
 export const FeatureTitle = styled(Title)`
   margin-left: 0;
 `;

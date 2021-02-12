@@ -58,6 +58,8 @@ Header.Group = function HeaderGroup({ children, ...restProps }) {
 Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
   return <Link {...restProps}>{children}</Link>;
 };
+
+/* Search **/
 Header.Search = function HeaderSearch({
   searchTerm,
   setSearchTerm,

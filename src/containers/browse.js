@@ -1,28 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Header, Card, Loading } from "../components";
 import * as ROUTES from "../routes";
 import logo from "../nettube.png";
-
 import youtube from "../API/functions";
-import { SubTitle } from "./../components/jumbotron/styles/jumbotron";
-
-// Set search term on search
-// Useeffect Hook to call youtube API on search term chnage
-// conditionall render cards or search results in return
 
 const Browse = ({ slides }) => {
   const [category, setCategory] = useState("videos");
   const [slideRows, setSlideRows] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const myRef = useRef(null);
+  const executeScroll = () => myRef.current.scrollIntoView();
 
   useEffect(() => {
     setSlideRows(slides.videos);
   }, [slides, category]);
-
-  useEffect(() => {
-    // Request Youtube Api
-  }, [searchTerm]);
 
   const handleSubmit = async (search) => {
     const response = await youtube.get("/search", {
@@ -30,7 +22,7 @@ const Browse = ({ slides }) => {
         q: search,
       },
     });
-    console.log(response.data.items);
+
     setSearchResults(response.data.items);
   };
 
@@ -56,7 +48,7 @@ const Browse = ({ slides }) => {
               Music
             </Header.TextLink>
           </Header.Group>
-          <Header.Group>
+          <Header.Group style={{ marginLeft: "1rem" }}>
             <Header.Search
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
@@ -65,12 +57,13 @@ const Browse = ({ slides }) => {
 
             <Header.Group>
               <Header.Text
+                style={{ cursor: "pointer", fontSize: "1.125rem" }}
                 onClick={() => {
-                  setSearchTerm("avengers");
-                  handleSubmit("avengers");
+                  handleSubmit(searchTerm);
+                  executeScroll();
                 }}
               >
-                Search{" "}
+                Search NetTube
               </Header.Text>
             </Header.Group>
           </Header.Group>
@@ -96,6 +89,7 @@ const Browse = ({ slides }) => {
       {searchTerm !== "" && searchResults.length === 0 ? <Loading /> : null}
 
       <Card.Group>
+        <div ref={myRef} />
         {searchTerm === "" ? (
           slideRows.map((slideItem, i) => (
             <Card key={i}>
@@ -116,18 +110,70 @@ const Browse = ({ slides }) => {
           ))
         ) : (
           <>
-            <Card.Title>Search Results</Card.Title>
-            <Card.Entities>
-              {searchResults.map((result, i) => (
-                <Card.SearchItem key={i} item={result}>
-                  <Card.Image /*src={`${item.previewImg}`}*/ />
-                  <Card.Meta>
-                    <Card.SubTitle>{result.snippet.title}</Card.SubTitle>
-                    <Card.Text>{result.snippet.description}</Card.Text>
-                  </Card.Meta>
-                </Card.SearchItem>
-              ))}
-            </Card.Entities>
+            <Card>
+              <Card.Title>Search Results:</Card.Title>
+              <Card.Entities>
+                {searchResults
+                  .filter((result, i) => searchResults.indexOf(result) < 5)
+                  .map((result, i) => (
+                    <Card.Item
+                      key={i}
+                      item={{
+                        title: result.snippet.title,
+                        description: result.snippet.description,
+                        genre: searchTerm,
+                        largeImg: result.snippet.thumbnails.high.url,
+                        maturity: result.rating,
+                        url: result.id.videoId,
+                      }}
+                    >
+                      <Card.Image src={result.snippet.thumbnails.medium.url} />
+                      <Card.Meta>
+                        <Card.SubTitle>{result.snippet.title}</Card.SubTitle>
+                        <Card.Text>{result.snippet.description}</Card.Text>
+                      </Card.Meta>
+                    </Card.Item>
+                  ))}
+              </Card.Entities>
+              <Card.Title></Card.Title>
+              <Card.Entities>
+                {searchResults
+                  .filter((result, i) => searchResults.indexOf(result) > 4)
+                  .map((result, i) => (
+                    <Card.Item
+                      key={i}
+                      item={{
+                        title: result.snippet.title,
+                        description: result.snippet.description,
+                        genre: searchTerm,
+                        largeImg: result.snippet.thumbnails.high.url,
+                        maturity: result.rating,
+                        url: result.id.videoId,
+                      }}
+                    >
+                      <Card.Image src={result.snippet.thumbnails.medium.url} />
+                      <Card.Meta>
+                        <Card.SubTitle>{result.snippet.title}</Card.SubTitle>
+                        <Card.Text>{result.snippet.description}</Card.Text>
+                      </Card.Meta>
+                    </Card.Item>
+                  ))}
+              </Card.Entities>
+              <Card.SearchFeature category={"search"} />
+            </Card>
+
+            <div
+              style={{
+                width: "100%",
+
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <Header.PlayButton onClick={() => setSearchTerm("")}>
+                Back
+              </Header.PlayButton>
+            </div>
           </>
         )}
       </Card.Group>

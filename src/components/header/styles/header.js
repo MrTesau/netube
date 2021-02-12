@@ -84,6 +84,9 @@ export const Text = styled.p`
   font-size: 20px;
   line-height: normal;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 
 export const PlayButton = styled.button`
@@ -141,10 +144,6 @@ export const Search = styled.div`
     color: white;
     cursor: pointer;
   }
-
-  @media (max-width: 700px) {
-    display: none;
-  }
 `;
 
 export const SearchIcon = styled.button`
@@ -179,5 +178,8 @@ export const SearchInput = styled.input`
 
   &:focus {
     background-color: rgba(0, 0, 0, 0.8);
+  }
+  @media (max-width: 700px) {
+    width: 100px;
   }
 `;
