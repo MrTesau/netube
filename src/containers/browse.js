@@ -82,7 +82,19 @@ const Browse = ({ slides }) => {
             The album was released on the iTunes Store on 29 January 2012.
             `}
           </Header.Text>
-          <Header.PlayButton>Play</Header.PlayButton>
+          <Header.PlayButton
+            onClick={() => {
+              setSearchTerm(
+                category === "videos" ? "Dune Trailer" : "Die Antwoord Tension"
+              );
+              handleSubmit(
+                category === "videos" ? "Dune Trailer" : "Die Antwoord Tension"
+              );
+              executeScroll();
+            }}
+          >
+            Play
+          </Header.PlayButton>
         </Header.Feature>
       </Header>
 
@@ -123,7 +135,7 @@ const Browse = ({ slides }) => {
                         description: result.snippet.description,
                         genre: searchTerm,
                         largeImg: result.snippet.thumbnails.high.url,
-                        maturity: result.rating,
+                        maturity: 11,
                         url: result.id.videoId,
                       }}
                     >
@@ -147,7 +159,7 @@ const Browse = ({ slides }) => {
                         description: result.snippet.description,
                         genre: searchTerm,
                         largeImg: result.snippet.thumbnails.high.url,
-                        maturity: result.rating,
+                        maturity: 11,
                         url: result.id.videoId,
                       }}
                     >
@@ -165,7 +177,6 @@ const Browse = ({ slides }) => {
             <div
               style={{
                 width: "100%",
-
                 display: "flex",
                 justifyContent: "center",
               }}
